@@ -17,7 +17,7 @@ Title="Resource Monitor"
   $port = $found['Ports'][0]['PublicPort'];
 ?>
 <?if ( ! $found ):?>
-<center><font size='3'>cAdvisor not installed<br>Install cAdvisor by clicking <a href='/AddContainer?xmlTemplate=default:/usr/local/emhttp/plugins/resource.monitor/xml/cadvisor.xml'>HERE</a><br>Do not change any of the path mappings already included.  Only change the <em>HOST</em> port to an applicable port number</font></center>
+<center><font size='3'>cAdvisor not installed<br>Install cAdvisor by clicking <a href='/AddContainer?xmlTemplate=default:/usr/local/emhttp/plugins/ca.resource.monitor/xml/cadvisor.xml'>HERE</a><br>Do not change any of the path mappings already included.  Only change the <em>HOST</em> port to an applicable port number</font></center>
 <?elseif ( ! $found['Running'] ):?>
 <center><font size='3'>cAdvisor is not running<br>Start the cAdvisor application from the Docker Container section<br>cAdvisor takes next to no resources itself, so it's advised to have it autostart</font></center>
 <?else:?>
