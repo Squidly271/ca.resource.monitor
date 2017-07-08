@@ -6,7 +6,7 @@
 <!ENTITY md5       "a8746cd0072f28dc827a7b6251a27273">
 <!ENTITY launch    "Docker">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
-<!ENTITY github    "Squidly271/ca.docker.autostart">
+<!ENTITY github    "Squidly271/ca.resource.monitor">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/master/plugins/&name;.plg">
 ]>
 
