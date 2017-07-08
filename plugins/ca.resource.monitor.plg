@@ -3,7 +3,7 @@
 <!ENTITY name      "ca.resource.monitor">
 <!ENTITY author    "Andrew Zawadzki">
 <!ENTITY version   "2017.07.08">
-<!ENTITY md5       "4957de1c4754e947880dcccbc57cb439">
+<!ENTITY md5       "a8746cd0072f28dc827a7b6251a27273">
 <!ENTITY launch    "Docker">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/ca.docker.autostart">
