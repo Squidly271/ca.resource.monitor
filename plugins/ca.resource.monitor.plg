@@ -2,8 +2,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "ca.resource.monitor">
 <!ENTITY author    "Andrew Zawadzki">
-<!ENTITY version   "2017.07.08">
-<!ENTITY md5       "92cab997a8704cab9dc60a785fd721d9">
+<!ENTITY version   "2017.09.25">
+<!ENTITY md5       "e10024a8638bef19b255cb410cca2c14">
 <!ENTITY launch    "Docker">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/ca.resource.monitor">
@@ -13,6 +13,9 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;">
 
 <CHANGES>
+###2017.09.25
+- Support IPs other than unRaid's
+
 ###2017.07.08
 - Initial Release
 </CHANGES>

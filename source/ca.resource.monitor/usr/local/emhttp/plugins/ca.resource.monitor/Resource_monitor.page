@@ -4,17 +4,20 @@ Title="Resource Monitor"
 <?PHP
   require_once("/usr/local/emhttp/plugins/dynamix.docker.manager/include/DockerClient.php");
 
-  $ipAddr = $eth0['IPADDR:0'];
+
   $DockerClient = new DockerClient();
   $info = $DockerClient->getDockerContainers();
-
+	$DockerTemplates = new DockerTemplates();
+	$allInfo = $DockerTemplates->getAllInfo();
   foreach ($info as $container) {
     if ( strpos($container['Image'],"google/cadvisor") !== false ) {
       $found = $container;
       break;
     }
   }
-  $port = $found['Ports'][0]['PublicPort'];
+	if ($found) {
+	  $url = $allInfo[$found['Name']]['url'];
+  }
 ?>
 <?if ( ! $found ):?>
 <center><font size='3'>cAdvisor not installed<br>Install cAdvisor by clicking <a href='/AddContainer?xmlTemplate=default:/usr/local/emhttp/plugins/ca.resource.monitor/xml/cadvisor.xml'>HERE</a><br>Do not change any of the path mappings already included.  Only change the <em>HOST</em> port to an applicable port number</font></center>
@@ -23,5 +26,5 @@ Title="Resource Monitor"
 <?else:?>
 <script src='/plugins/resource.monitor/javascript/w3.js'></script>
 To get the resources consumed by a particular application, within cAdvisor, select Docker Containers, and then select the appropriate app
-<iframe src='http://<?=$ipAddr?>:<?=$port?>' width=100%; height=700px;></iframe>
+<iframe src='<?=$url?>' width=100%; height=700px;></iframe>
 <?endif;?>
